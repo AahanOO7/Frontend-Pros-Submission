@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Landing() {
     return (
@@ -7,6 +8,9 @@ function Landing() {
                 <h1>Welcome to CoursePoint!</h1>
                 <h3>Find the best courses here!</h3>
             </div>
+            <Link className="courses-link-button" to="/courses">
+                See Courses
+            </Link>
         </section>
     );
 }

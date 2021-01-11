@@ -4,12 +4,22 @@ import Courses from './Courses';
 import Header from './Header';
 import Landing from './Landing';
 import Course from './Course';
+import Sidebar from './Sidebar';
+import { useState } from 'react';
 
 function App() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
         <div className="app">
             <Router>
-                <Header />
+                <Header
+                    setIsSidebarOpen={setIsSidebarOpen}
+                    isSidebarOpen={isSidebarOpen}
+                />
+                <Sidebar
+                    isSidebarOpen={isSidebarOpen}
+                    setIsSidebarOpen={setIsSidebarOpen}
+                />
                 <Switch>
                     <Route path="/" exact>
                         <Landing />

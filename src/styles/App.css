@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik'sans-serif;
+    font-family: 'Rubik' sans-serif;
 }
 
 body {
@@ -58,14 +58,15 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    float: right;
+    flex-direction: column;
 }
 
 .nav-link:link,
 .nav-link:visited {
     color: #282828;
+    margin-top: 20px;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     padding: 10px;
     background-color: #fefefe;
     border-radius: 10px;
@@ -76,6 +77,28 @@ nav {
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
+.nav-open-button-container {
+    width: 50px;
+    float: right;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-open-button {
+    width: 100%;
+}
+
+.nav-open-button-line {
+    width: 100%;
+    height: 2px;
+    background-color: #fefefe;
+    content: '';
+    margin-bottom: 10px;
+}
+
 .nav-link:hover,
 .nav-link:active {
     transform: scale(1.05);
@@ -83,6 +106,37 @@ nav {
 }
 
 /* ------------------------ */
+
+/* Aside */
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 13;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    background-color: #049bff;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+}
+
+aside.open {
+    transform: translateX(0);
+}
+
+.close-sidebar-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 150%;
+    user-select: none;
+    color: red;
+}
 
 /* -------- Landing Section -------- */
 
@@ -123,6 +177,10 @@ nav {
     padding-right: 40px;
     background-image: linear-gradient(to bottom, #fff, #7ccfff);
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .courses-section-title {
@@ -160,7 +218,7 @@ nav {
 }
 
 .course:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .course-container {
@@ -179,7 +237,7 @@ nav {
 }
 
 .course-image {
-    width: 80%;
+    width: 280px;
     height: auto;
     border-radius: 10px;
     position: absolute;
@@ -232,7 +290,7 @@ strike {
     height: auto;
     background-image: linear-gradient(to bottom right, #a6deff, #049bff);
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -296,3 +354,89 @@ strike {
 }
 
 /* ------------------------ */
+
+@media screen and (max-width: 1000px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .course-image {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+    .course-image {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .courses-grid {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .courses-grid {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .courses-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    aside.open {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .landing-section-hero h1 {
+        font-size: 250%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .landing-section-hero h1 {
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .landing-section-hero {
+        display: block;
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .course-detail-image {
+        width: 80%;
+    }
+}
+
+.courses-link-button {
+    display: block;
+    padding: 10px;
+    background-color: #049bff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: #282828;
+}
