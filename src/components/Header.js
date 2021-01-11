@@ -5,7 +5,9 @@ import logo from '../media/header_logo.jpeg';
 function Header() {
     return (
         <header>
-            <img src={logo} alt="CoursePoint" />
+            <Link to="/">
+                <img src={logo} alt="CoursePoint" />
+            </Link>
             <nav>
                 <Link to="/" className="nav-link">
                     Home

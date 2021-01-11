@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Courses from './Courses';
 import Header from './Header';
 import Landing from './Landing';
+import Course from './Course';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/courses" exact>
                         <Courses />
                     </Route>
+                    <Route path="/course/:id" component={Course} exact />
                 </Switch>
             </Router>
         </div>
