@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik' sans-serif;
+    font-family: 'Rubik'sans-serif;
 }
 
 body {
@@ -81,6 +81,7 @@ nav {
     transform: scale(1.05);
     box-shadow: 0 0 7px 1px #000;
 }
+
 /* ------------------------ */
 
 /* -------- Landing Section -------- */
@@ -148,7 +149,7 @@ nav {
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px 50px;
+    grid-gap: 40px 70px;
 }
 
 .course {
@@ -171,7 +172,7 @@ nav {
     align-items: center;
     flex-direction: column;
     position: relative;
-    padding-top: 110px;
+    padding-top: 22vh;
     padding-bottom: 15px;
     color: #282828;
     background-image: radial-gradient(#44a3e2, #0094f7);
