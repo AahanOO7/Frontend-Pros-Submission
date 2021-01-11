@@ -1,0 +1,125 @@
+/* -------- Universal Styles -------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik' sans-serif;
+}
+
+body {
+    font-size: 20px;
+    --dark-theme-color: #072f5f;
+    --theme-color: #3895d3;
+}
+
+section {
+    padding-top: 80px;
+    background-color: #ccc;
+    height: 100vh;
+}
+
+/* ------------------------ */
+
+/* -------- Header -------- */
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--dark-theme-color);
+    /* display: flex; */
+    padding: 10px;
+    clear: both;
+}
+
+header img {
+    float: left;
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    float: right;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: #282828;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 5px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* ------------------------ */
+
+/* -------- Landing Section -------- */
+
+.landing-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-section-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #282828;
+}
+
+.landing-section-hero h1 {
+    font-size: 300%;
+}
+
+.landing-section-hero h3 {
+    font-size: 150%;
+}
+
+/* ------------------------ */
+
+/* -------- Courses Section -------- */
+
+.courses-section {
+    height: auto;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.courses-section-title {
+    font-size: 160%;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.course {
+    height: 200px;
+    background-color: var(--theme-color);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* ------------------------ */

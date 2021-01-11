@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
+import '../styles/App.css';
+import Courses from './Courses';
 import Header from './Header';
+import Landing from './Landing';
 
 function App() {
     return (
@@ -8,7 +10,12 @@ function App() {
             <Router>
                 <Header />
                 <Switch>
-                    <Route path="/"></Route>
+                    <Route path="/" exact>
+                        <Landing />
+                    </Route>
+                    <Route path="/courses" exact>
+                        <Courses />
+                    </Route>
                 </Switch>
             </Router>
         </div>
