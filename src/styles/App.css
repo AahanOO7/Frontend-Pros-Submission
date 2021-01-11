@@ -232,6 +232,7 @@ strike {
     height: auto;
     background-image: linear-gradient(to bottom right, #a6deff, #049bff);
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
